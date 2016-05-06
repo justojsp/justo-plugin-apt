@@ -1,4 +1,5 @@
 [![NPM version](http://img.shields.io/npm/v/justo-plugin-apt.svg)](https://www.npmjs.org/package/justo-plugin-apt)
+[![Build Status](https://travis-ci.org/justojsp/justo-plugin-apt.svg?branch=master)](https://travis-ci.org/justojsp/justo-plugin-apt)
 [![Dependency Status](https://david-dm.org/justojsp/justo-plugin-apt.svg)](https://david-dm.org/justojsp/justo-plugin-apt)
 [![devDependency Status](https://david-dm.org/justojsp/justo-plugin-apt/dev-status.svg)](https://david-dm.org/justojsp/justo-plugin-apt#info=devDependencies)
 
@@ -14,7 +15,9 @@ npm install justo-plugin-apt
 
 # Dependencies
 
-This plugin requires the `apt` command already installed.
+This plugin requires:
+
+- The `apt` command.
 
 # Use
 
@@ -64,6 +67,27 @@ Example:
 ```
 if (apt.available("Check if cURL is available", {name: "curl"})) {
   apt.install("Install cURL", {name: "curl"});
+}
+```
+
+## installed task
+
+Check whether packages are installed:
+
+```
+installed(justoOpts, opts : object) : boolean
+```
+
+The `opts` parameter:
+
+- `name` (string). Package name.
+- `names` (string[]). Package names.
+
+Example:
+
+```
+if (apt.installed("Check whether cURL installled", {name: "curl"})) {
+  apt.uninstall("Uninstall CURL", {name: "curl"});
 }
 ```
 

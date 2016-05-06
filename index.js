@@ -3,7 +3,7 @@ import {simple} from "justo";
 
 //internal data
 const NS = "org.justojs.plugin.apt";
-var available, install, list, remove, update, upgrade;
+var available, install, installed, list, remove, update, upgrade;
 
 //api
 module.exports = {
@@ -15,6 +15,11 @@ module.exports = {
   get install() {
     if (!install) install = simple({ns: NS, name: "install"}, require("./lib/install").default);
     return install;
+  },
+
+  get installed() {
+    if (!installed) installed = simple({ns: NS, name: "installed"}, require("./lib/installed").default);
+    return installed;
   },
 
   get list() {

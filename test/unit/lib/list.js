@@ -15,7 +15,7 @@ suite("#op()", function() {
     var pkgs = op([]);
     pkgs.must.be.instanceOf(Array);
     pkgs.length.must.be.gt(0);
-    for (let pkg of pkgs) {
+    for (var pkg of pkgs) {
       pkg.must.have(["name", "release", "installed"]);
     }
   });
@@ -32,7 +32,7 @@ suite("#op()", function() {
     var pkgs = op([{term: "bash*"}]);
     pkgs.must.be.instanceOf(Array);
     pkgs.length.must.be.gt(1);
-    for (let pkg of pkgs) {
+    for (var pkg of pkgs) {
       pkg.must.have(["name", "release", "installed"]);
       pkg.name.must.match(/^bash.*/);
     }
@@ -42,7 +42,7 @@ suite("#op()", function() {
     var pkgs = op([{installed: true}]);
     pkgs.must.be.instanceOf(Array);
     pkgs.length.must.be.gt(0);
-    for (let pkg of pkgs) {
+    for (var pkg of pkgs) {
       pkg.must.have(["name", "release"]);
       pkg.installed.must.be.eq(true);
     }
@@ -51,8 +51,7 @@ suite("#op()", function() {
   test("list({upgradable})", function() {
     var pkgs = op([{upgradable: true}]);
     pkgs.must.be.instanceOf(Array);
-    for (let pkg of pkgs) {
-      console.log(pkg);
+    for (var pkg of pkgs) {
       pkg.must.have(["name", "release", "installed"]);
     }
   });

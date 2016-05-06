@@ -14,6 +14,10 @@ suite("API", function() {
     pkg.install.must.be.instanceOf(Function);
   });
 
+  test("installed", function() {
+    pkg.installed.must.be.instanceOf(Function);
+  });
+
   test("list", function() {
     pkg.list.must.be.instanceOf(Function);
   });

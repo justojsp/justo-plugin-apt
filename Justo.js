@@ -60,6 +60,7 @@ catalog.macro({name: "test", desc: "Unit test."}, {
     "test/unit/index.js",
     "test/unit/lib/update.js",
     "test/unit/lib/available.js",
+    "test/unit/lib/installed.js",
     "test/unit/lib/list.js",
     "test/unit/lib/install.js",
     "test/unit/lib/remove.js",

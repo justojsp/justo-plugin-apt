@@ -8,7 +8,7 @@ const fin = justo.fin;
 const op = require("../../../dist/es5/nodejs/justo-plugin-apt/lib/upgrade").default;
 
 //suite
-suite("#op()", function() {
+suite({name: "#op()", ignore: process.env.TRAVIS == "true"}, function() {
   const DATA = "test/unit/data";
 
   test("upgrade()", function() {

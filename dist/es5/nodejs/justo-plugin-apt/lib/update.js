@@ -15,7 +15,7 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
   res = _child_process2.default.spawnSync("apt", ["update"]);
 
   if (opts.output) console.log(res.stdout.toString());
-  if (res.status) throw new Error(res.stdout.toString());
+  if (res.status) throw new Error(res.stderr.toString());
 
 
   return res.status;}

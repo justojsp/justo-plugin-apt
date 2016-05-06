@@ -25,7 +25,7 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
     res = _child_process2.default.spawnSync("apt", args);
 
     if (res.status) {
-      throw new Error(res.stdout.toString());} else 
+      throw new Error(res.stderr.toString());} else 
     {
       var output = res.output.toString();
 

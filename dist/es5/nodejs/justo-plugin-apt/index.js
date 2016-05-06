@@ -3,7 +3,7 @@ var _justo = require("justo");
 
 
 var NS = "org.justojs.plugin.apt";
-var available, install, list, remove, update, upgrade;
+var available, install, installed, list, remove, update, upgrade;
 
 
 module.exports = { 
@@ -15,6 +15,11 @@ module.exports = {
   get install() {
     if (!install) install = (0, _justo.simple)({ ns: NS, name: "install" }, require("./lib/install").default);
     return install;}, 
+
+
+  get installed() {
+    if (!installed) installed = (0, _justo.simple)({ ns: NS, name: "installed" }, require("./lib/installed").default);
+    return installed;}, 
 
 
   get list() {

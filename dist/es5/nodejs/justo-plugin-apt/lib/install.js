@@ -1,10 +1,10 @@
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default =
 
 
 
 
 
-op;var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function op(params) {
+op;var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function op(params, console) {
   var opts, args, res;
 
 
@@ -16,7 +16,8 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
 
 
   args = ["install", "-y"];
-  if (opts.reinstall) args.push("--reinstall");var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {
+  if (opts.reinstall) args.push("--reinstall");
+  if (opts.allowUnauthenticated) args.push("--allow-unauthenticated");var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {
     for (var _iterator = opts.names[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {var pkg = _step.value;args.push(pkg);}} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator.return) {_iterator.return();}} finally {if (_didIteratorError) {throw _iteratorError;}}}
 
 
@@ -26,4 +27,5 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
   if (res.status) throw new Error(res.stderr.toString());
 
 
-  return res.status;}
+  return res.status;
+}

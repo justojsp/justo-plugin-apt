@@ -1,10 +1,10 @@
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default =
 
 
 
 
 
-op;var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function op(params) {
+op;var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function op(params, console) {
   var opts, args, res;
 
 
@@ -25,4 +25,5 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
   if (res.status) throw new Error(res.stderr.toString());
 
 
-  return res.status;}
+  return res.status;
+}

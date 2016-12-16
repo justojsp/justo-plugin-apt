@@ -1,11 +1,11 @@
 {
   "name": "justo-plugin-apt",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Plugin for APT (Advanced Package Tool)",
   "homepage": "http://justojs.org",
   "author": {
     "name": "Justo Labs",
-    "email": "info@jutolabs.com",
+    "email": "hello@jutolabs.com",
     "url": "http://justojs.org"
   },
   "contributors": [
@@ -47,8 +47,8 @@
     "justo": "*",
     "justo-assert": "*",
     "justo-plugin-babel": "*",
+    "justo-plugin-eslint": "*",
     "justo-plugin-fs": "*",
-    "justo-plugin-jshint": "*",
     "justo-plugin-npm": "*"
   },
   "main": "index.js",

@@ -1,4 +1,4 @@
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default =
 
 
 
@@ -23,8 +23,8 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
   res = _child_process2.default.spawnSync("apt", args);
 
   if (res.status) {
-    throw new Error(res.stderr.toString());} else 
-  {
+    throw new Error(res.stderr.toString());
+  } else {
     var output = res.output.toString();
 
     res = [];var _iteratorNormalCompletion2 = true;var _didIteratorError2 = false;var _iteratorError2 = undefined;try {
@@ -33,10 +33,11 @@ op;var _child_process = require("child_process");var _child_process2 = _interopR
 
         if (pattern.test(ln)) {
           var pkg = pattern.exec(ln).slice(1, 3);
-          res.push({ name: pkg[0], release: pkg[1], installed: /\[.*installed.*\]/.test(ln) });}}} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}}
+          res.push({ name: pkg[0], release: pkg[1], installed: /\[.*installed.*\]/.test(ln) });
+        }
+      }} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}
+  }
 
 
-
-
-
-  return res;}
+  return res;
+}

@@ -6,41 +6,42 @@ var NS = "org.justojs.plugin.apt";
 var available, install, installed, list, remove, update, upgrade;
 
 
-module.exports = { 
+module.exports = {
   get available() {
     if (!available) available = (0, _justo.simple)({ ns: NS, name: "available" }, require("./lib/available").default);
-    return available;}, 
-
+    return available;
+  },
 
   get install() {
     if (!install) install = (0, _justo.simple)({ ns: NS, name: "install" }, require("./lib/install").default);
-    return install;}, 
-
+    return install;
+  },
 
   get installed() {
     if (!installed) installed = (0, _justo.simple)({ ns: NS, name: "installed" }, require("./lib/installed").default);
-    return installed;}, 
-
+    return installed;
+  },
 
   get list() {
     if (!list) list = (0, _justo.simple)({ ns: NS, name: "list" }, require("./lib/list").default);
-    return list;}, 
-
+    return list;
+  },
 
   get remove() {
     if (!remove) remove = (0, _justo.simple)({ ns: NS, name: "remove" }, require("./lib/remove").default);
-    return remove;}, 
-
+    return remove;
+  },
 
   get uninstall() {
-    return this.remove;}, 
-
+    return this.remove;
+  },
 
   get update() {
     if (!update) update = (0, _justo.simple)({ ns: NS, name: "update" }, require("./lib/update").default);
-    return update;}, 
-
+    return update;
+  },
 
   get upgrade() {
     if (!upgrade) upgrade = (0, _justo.simple)({ ns: NS, name: "upgrade" }, require("./lib/upgrade").default);
-    return upgrade;} };
+    return upgrade;
+  } };

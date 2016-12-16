@@ -134,6 +134,7 @@ The `opts` parameter:
 - `name` (string). Package name.
 - `names` (string[]). Package names.
 - `reinstall` (boolean). Reinstall? Default: `false`.
+- `allowUnauthenticated` (boolean). --allow-unauthenticated? Default: `false`.
 - `output` (boolean). Display the output? Default: `false`.
 
 Example:
@@ -141,6 +142,7 @@ Example:
 ```
 //one package
 apt.install("Install CouchDB", {name: "couchdb"});
+apt.install("Install ArangoDB", {name: "arangodb3", allowUnauthenticated: true});
 
 //several packages
 apt.install("Install databases", {names: ["couchdb", "postgresql"]});
